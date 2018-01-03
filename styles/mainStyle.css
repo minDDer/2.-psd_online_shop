@@ -1,0 +1,1082 @@
+/* color scheme https://colorscheme.ru/#4H61Tw0w0w0w0 */
+
+/* fonts connection */
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: "Raleway-ExtraBold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-Heavy";
+    src: url(../fonts/Raleway-Heavy.ttf);
+}
+@font-face {
+    font-family: "Raleway-Italic";
+    src: url(../fonts/Raleway-Italic.ttf);
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Black";
+    src: url(../fonts/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    src: url(../fonts/Roboto-BlackItalic.ttf);
+}
+/* end of fonts connection */
+
+/* adaptivity */
+/* big screens */
+@media all and (min-width: 1200px) {
+    .mainHeaderSmallMenuBlock {
+        display: none;
+    }
+    .mainHeaderSmall {
+        display: none;
+    }
+    .bodyContent nav {
+        display: none;
+    }
+}
+
+/* medium screens */
+@media all and (min-width: 800px) and (max-width: 1199px) {
+    .mainHeader {
+        display: none;
+    }
+    /* small header menu */
+    .mainHeaderSmallMenuBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        background-color: #7109aa;
+    }
+    .mainHeaderSmallMenu {
+        width: 80%;
+    }
+    .menuBrands {
+        position: relative;
+        visibility: hidden;
+        margin-left: 250px;
+        top: 0;
+    }
+    .mainHeaderSmallMenuNavigation {
+        margin: 0;
+        float: left;
+        list-style: none;
+        font-family: "Roboto-Black", sans-serif;
+        color: white;
+        font-size: 22px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+    .mainHeaderSmallMenuNavigation li {
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        z-index: 1;
+    }
+    .mainHeaderSmallMenuNavigation li a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    .mainHeaderSmallMenuNavigation li a:hover {
+        color: #7109aa;
+        background: white;
+    }
+    /* dropdown menu elements */
+    .mainHeaderSmallMenuNavigation ul {
+        visibility: hidden;
+        position: absolute;
+        background-color: #7109aa;
+        list-style: none;
+        left: -20px;
+        padding: 0 10px;
+        opacity: 0;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    .mainHeaderSmallMenuNavigation ul li {
+        padding: 10px 0;
+        float: none;
+    }
+    .mainHeaderSmallMenuNavigation ul a {
+        white-space: nowrap;
+        display: block;
+        width: 200px;
+    }
+    .mainHeaderSmallMenuNavigation li:hover ul {
+        visibility: visible;
+        opacity: 0.9;
+        transition: 1s;
+    }
+    .mainHeaderSmallMenuNavigation li:hover .menuBrands {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay: 1s;
+    }
+    .mainHeaderSmallMenuNavigation li ul li:hover .menuBrands {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .mainHeaderSmallSocialNetworksIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 50px;
+        width: 20%;
+    }
+    /* end of small header menu */
+    .mainHeaderSmall {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: url(../images/mainHeader/mainHeader2.jpg) no-repeat fixed;
+        background-size: contain;
+    }
+    .mainHeaderSmallLeftSide {
+        width: 50%;
+    }
+    .welcomeBoxSmall {
+        position: relative;
+        width: 270px;
+        height: 75%;
+        margin: 30px;
+        padding: 10px;
+        background: rgba(173,102,213,0.1);
+    }
+    .welcomeBoxTitleSmall {
+        display: block;
+        margin: 10px;
+        font-family: "Raleway-Bold", sans-serif;
+        color: #7109aa;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    .welcomeBoxTextSmall {
+        display: block;
+        color: #7109aa;
+        font-size: 20px;
+        font-family: "Raleway-Regular", sans-serif;
+    }
+    .welcomeBoxTitleSmall b {
+        font-family: "Raleway-Heavy", sans-serif;
+    }
+    .mainHeaderSmallRightSide {
+        width: 60%;
+    }
+    .floatTextSmall {
+        width: 400px;
+        margin: 30px;
+        padding: 10px;
+        float: right;
+        /*        float: right;*/
+    }
+    .floatTextTitleSmall {
+        margin: 10px;
+        font-family: "Raleway-Bold", sans-serif;
+        color: #7109aa;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    .floatTextTitleSmall b {
+        margin: 0;
+        font-family: "Raleway-Heavy", sans-serif;
+        float: right;
+        font-size: 1.6em;
+    }
+    .floatTextTextSmall {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px 0;
+        color: #7109aa;
+        font-size: 20px;
+        font-family: "Raleway-Regular", sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        background: rgba(173,102,213,0.1);
+    }
+    .floatTextSmall a {
+        width: 140px;
+        height: 49px;
+        display: block;
+        font-family: "Raleway-Heavy", sans-serif;
+        color: #7109aa;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: none;
+        line-height: 49px;
+        text-transform: uppercase;
+        background-color: #ffff00;
+        transition: 4s;
+    }
+    .floatTextSmall a:hover {
+        background: rgba(173,102,213,0.1);
+        color: #ffff00;
+        transition: 0.5s;
+    }
+    .leftMenuandAdvertisementBlock {
+        display: none;
+        visibility: hidden;
+    }
+    .productsContainerBlock {
+        position: relative;
+        left: -180px;
+        margin-top: 25px;
+    }
+    .productsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 635px;
+        margin: 0 auto;
+    }
+    .bottomBrand {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+/* small screens */
+@media all and (max-width: 799px) {
+    .mainHeader,
+    .headerContent,
+    .mainLogoAndwelcomeBoxAlignment,
+    .main_logo,
+    .welcomeBox,
+    .socialNetworkIconsAndfloatTextAlignment,
+    .socialNetworkIconsBlock,
+    .floatText,
+    .mainHeaderSmall,
+    .mainHeaderSmallLeftSide,
+    .mainHeaderSmallRightSide,
+    .leftMenuandProductsBlock,
+    .leftMenuandAdvertisementBlock,
+    .leftMenu,
+    .advertisement,
+    .bottomBrand,
+    .bottomBrandItem,
+    .instaPics,
+    .instaPicsContent,
+    .instaPicsContentText,
+    .instaPicsContentImages,
+    .bottomSocialLinks,
+    .bottomSocialLinksItem {
+        display: none;
+    }
+    /* small header menu */
+    .mainHeaderSmallMenuBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 450px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: #7109aa;
+    }
+    .mainHeaderSmallMenu {
+        width: 80%;
+    }
+    .menuBrands {
+        position: relative;
+        visibility: hidden;
+        margin-left: 250px;
+        top: 0;
+    }
+    .mainHeaderSmallMenuNavigation {
+        margin: 0;
+        float: left;
+        list-style: none;
+        font-family: "Roboto-Black", sans-serif;
+        color: white;
+        font-size: 22px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+    .mainHeaderSmallMenuNavigation li {
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        z-index: 1;
+    }
+    .mainHeaderSmallMenuNavigation li a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    .mainHeaderSmallMenuNavigation li a:hover {
+        color: #7109aa;
+        background: white;
+    }
+    /* dropdown menu elements */
+    .mainHeaderSmallMenuNavigation ul {
+        visibility: hidden;
+        position: absolute;
+        background-color: #7109aa;
+        list-style: none;
+        left: -20px;
+        padding: 0 10px;
+        opacity: 0;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    .mainHeaderSmallMenuNavigation ul li {
+        padding: 10px 0;
+        float: none;
+    }
+    .mainHeaderSmallMenuNavigation ul a {
+        white-space: nowrap;
+        display: block;
+        width: 200px;
+    }
+    .mainHeaderSmallMenuNavigation li:hover ul {
+        visibility: visible;
+        opacity: 0.9;
+        transition: 1s;
+    }
+    .mainHeaderSmallMenuNavigation li:hover .menuBrands {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay: 1s;
+    }
+    .mainHeaderSmallMenuNavigation li ul li:hover .menuBrands {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .mainHeaderSmallSocialNetworksIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 50px;
+        width: 20%;
+    }
+    /* end of small header menu */
+    .productsContainerBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        left: -180px;
+    }
+    .productsContainer {
+        min-width: 330px;
+    }
+}
+/* end of adaptivity */
+
+body {
+    margin: 0;
+}
+
+/* main header */
+.mainHeader {
+    width: 100%;
+    /*min-width: 1200px;*/
+    height: 700px;
+    float: left;
+    background: url(../images/mainHeader/mainHeader2.jpg) no-repeat fixed;
+    background-size: contain;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.mainLogoAndwelcomeBoxAlignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%
+}
+
+.main_logo {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    width: 270px;
+    height: 80px;
+    /*    background: url(../images/logo/onShop_Logo.png) no-repeat;*/
+    background-size: contain;
+    background-position: center;
+}
+
+.welcomeBox {
+    position: relative;
+    width: 270px;
+    height: 300px;
+    top: 170px;
+    left: 150px;
+    background: rgba(173,102,213,0.1);
+}
+
+.welcomeBoxTitle {
+    margin: 77px 0 0 25px;
+    font-family: "Raleway-Bold", sans-serif;
+    color: #7109aa;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.welcomeBoxTitle b {
+    font-family: "Raleway-Heavy", sans-serif;
+}
+
+.welcomeBoxText {
+    margin: 20px 0 0 22px;
+    width: 85%;
+    color: #7109aa;
+    font-size: 20px;
+    font-family: "Raleway-Regular", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.socialNetworkIconsAndfloatTextAlignment {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 70%;
+}
+
+.socialNetworkIconsBlock {
+    display: inline-block;
+    float: right;
+    height: 50px;
+    position: relative;
+    top: 30px;
+    left: 300px;
+}
+
+.socialNetworkIcons {
+    display: inline-block;
+    width: 28px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    transition: 2s;
+}
+
+.socialNetworkIcons:hover {
+    background-color: rgba(173,102,213,0.3);
+    border-radius: 10px;
+    color: #7109aa;
+    text-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+.floatText {
+    position: relative;
+    top: 100px;
+    right: 270px;
+    width: 400px;
+    height: 400px;
+}
+
+.floatTextTitle {
+    font-family: "Raleway-Bold", sans-serif;
+    color: #7109aa;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.floatTextTitle b {
+    font-family: "Raleway-Heavy", sans-serif;
+    float: right;
+    font-size: 2em;
+}
+
+.floatTextText {
+    padding: 10px;
+    margin: 80px 0 40px 0;
+    color: #7109aa;
+    font-size: 20px;
+    font-family: "Raleway-Regular", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    background: rgba(173,102,213,0.1);
+}
+
+.floatText a {
+    width: 140px;
+    height: 49px;
+    display: block;
+    font-family: "Raleway-Heavy", sans-serif;
+    color: #7109aa;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    line-height: 49px;
+    text-transform: uppercase;
+    background-color: #ffff00;
+    transition: 4s;
+}
+
+.floatText a:hover {
+    background: rgba(173,102,213,0.1);
+    color: #ffff00;
+    transition: 0.5s;
+}
+/* end of main header */
+
+/* main body */
+.mainBody {
+    width: 100%;
+    float: left;
+    background: url(../images/mainBody/mainBodyBackground4.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.bodyContent {
+    margin: -20px auto 0 auto;
+}
+
+/* left menu and advertisement block */
+.leftMenuandProductsBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 150px 30px 150px;
+    /*min-width: 1200px;*/
+}
+
+.leftMenuandAdvertisementBlock {
+    width: 270px;
+    height: 790px;
+}
+
+/* left menu */
+.leftMenu {
+    float: left;
+    width: 270px;
+    margin: 0 30px 30px 0;
+}
+
+.transparentMenuItems {
+    opacity: 0.3;
+    transition-duration: 5s;
+}
+
+.transparentMenuItems:hover {
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+.leftMenu p {
+    margin: 0;
+    transition: 1s;
+}
+
+.leftMenuTitle {
+    margin: 0;
+    padding-left: 30px;
+    font-family: "Roboto-Black", sans-serif;
+    color: #7109aa;
+    font-size: 22px;
+    line-height: 69px;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+.leftMenuItem {
+    display: block;
+    padding-left: 30px;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #412c83;
+    font-size: 16px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: white;
+    transition: 5s;
+}
+
+.leftMenuItem:hover {
+    color: #f8f8f8;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background-color: #48036f;
+    transition: 0.3s;
+}
+/* end of left menu */
+
+/* advertisement block */
+.advertisement {
+    float: left;
+    width: 270px;
+    height: 300px;
+    background: #e0e0e0 url(../images/advertisement/galaxy-s8.jpg) no-repeat center;
+    background-size: cover;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.advertisement:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.advertisement a {
+    display: block;
+    text-decoration: none;
+}
+
+.advertisementText {
+    position: relative;
+    top: 125px;
+    left: 80px;
+    width: 120px;
+    font: italic 60px "Raleway-Heavy", sans-serif;
+    color: #ffff00;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+/* end of advertisement block */
+
+/* products */
+.productsContainerBlock {
+    margin-left: 30px;
+    width: 100%;
+}
+
+.productsContainer {
+    background-color: rgba(255,255,255,0.6);
+    overflow: hidden;
+}
+
+.productsContainer:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.firstProductsTitle {
+    margin-top: -20px;
+    padding: 40px 0 20px 30px;
+    font-family: "Roboto-Black", sans-serif;
+    color: #7109aa;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+.productsTitle {
+    padding: 30px;
+    font-family: "Roboto-Black", sans-serif;
+    color: #7109aa;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: white;
+    clear: both;
+}
+
+.productsItem {
+    background-color: #fff;
+    width: 270px;
+    height: 350px;
+    float: left;
+    margin: 0 0 30px 30px;
+    border: 1px solid transparent;
+    opacity: 0.9;
+    transition: 5s;
+}
+
+.productsItem a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.productsItem:hover {
+    background: rgba(173,102,213,0.5);
+    border: 1px solid #7109aa;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.productsItem:hover .productsItemTextTitle {
+    color: #7109aa;
+    transition: 0.5s;
+}
+
+.productsItem:hover .productsItemTextPrice {
+    color: #7109aa;
+    transition: 0.5s;
+}
+
+.productsItemImage {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    object-fit: contain;
+}
+
+.productsItemText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productsItemTextTitle {
+    margin: 10px;
+    font-family: "Roboto-BlackItalic", sans-serif;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    max-height: 3em;
+    overflow: hidden;
+    transition: 5s;
+}
+
+.productsItemTextPrice {
+    width: 90px;
+    margin: 10px;
+    font-family: "Roboto-BlackItalic", sans-serif;
+    color: #333;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: right;
+    transition: 5s;
+}
+
+.productsItemTextDiscount {
+    margin: 10px;
+    font-family: "Roboto-BlackItalic", sans-serif;
+    color: rgba(254,0,0,0.6);
+    font-size: 14px;
+    font-weight: 900;
+    text-align: right;
+    text-decoration: line-through;
+}
+/* end of products */
+
+/* bottom brand field */
+.bottomBrand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 160px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.bottomBrandItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottomBrandItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* end of bottom brand field */
+
+/* instagram pictures*/
+.instaPics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /*min-width: 1200px;*/
+    height: 350px;
+    clear: both;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.instaPicsContentText {
+    font-family: "Roboto-BlackItalic", sans-serif;
+    color: #333;
+    font-size: 22px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+}
+
+.instaPicsContentText p span+span {
+    font-family: "Roboto-BlackItalic", sans-serif;
+    color: #333;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.instaPicsContentImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /*min-width: 1200px;*/
+}
+
+.instaPicsContentImages img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: 5s
+}
+
+.instaPicsContentImages img:hover {
+    border: 1px solid #7109aa;
+    transition: 0.5s
+}
+/* end of instagram pictures*/
+
+/* bottom social links */
+.bottomSocialLinks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*min-width: 1200px;*/
+    height: 150px;
+    clear: both;
+}
+
+.bottomSocialLinksItem {
+    width: 33.3%;
+    text-align: center;
+    color: white;
+    font-size: 62px;
+    line-height: 150px;
+    transition: 3s;
+}
+
+.bottomSocialLinksItem:hover {
+    font-size: 8em;
+    transition: 0.3s;
+}
+
+.bottomSocialLinksItem a {
+    color: white;
+}
+
+.bottomSocialLinksItemFB {
+    display: block;
+    background-color: #3b5997;
+}
+
+.bottomSocialLinksItemTwitter {
+    display: block;
+    background-color: #3fccfd;
+}
+
+.bottomSocialLinksItemPinterest {
+    display: block;
+    background-color: #cb2027;
+}
+/* end of bottom social links */
+/* end of main body */
+
+/* footer */
+.footer {
+    width: 100%;
+    /*min-width: 1200px;*/
+    float: left;
+    height: 340px;
+    background-color: #373737;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*    width: 1190px;*/
+    margin: 0 200px;
+    height: 300px;
+}
+
+.footerMainContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerTitle {
+    margin-top: 80px;
+    font-family: "Raleway-ExtraBold", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footerLeftSide {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.footerLeftSideItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33.3%;
+    height: 260px;
+}
+
+.footerLeftSideItemText {
+    font-family: "Roboto-Light", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footerRightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 260px;
+}
+
+.footerRightSideItemText {
+    width: 90%;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #f8f8f8;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footerRightSideFeedbackFormEmailField {
+    width: 150px;
+    height: 30px;
+    border: 0;
+    padding-left: 20px;
+    background-color: #fff51f;
+    outline: none;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.footerRightSideFeedbackFormSubmitButton {
+    width: 60px;
+    height: 32px;
+    border: 0;
+    margin-left: -4px;
+    background-color: #000;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase
+}
+
+.footerRightSidePaymentSystems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerRightSidePaymentSystemsIcon {
+    width: 36px;
+    height: 22px;
+    background-color: red;
+    margin-top: 40px;
+}
+
+.footerRightSideItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.footerRightSideItemPhone {
+    font-family: "Roboto-Regular", sans-serif;
+    color: #f8f8f8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footerRightSideItemEmail {
+    font-family: "Roboto-Regular", sans-serif;
+    color: #f8f8f8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footerRightSideItemEmail span {
+    font-family: "Roboto-Regular", sans-serif;
+    color: #faef03;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footerBottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    background-color: #333;
+}
+
+.footerBottomLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 200px;
+    padding: 0;
+    color: #dad9d9;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 47px;
+}
+
+.footerBottomLineRightText {
+    color: inherit;
+    text-indent: 20px;
+}
+/* end of footer */
